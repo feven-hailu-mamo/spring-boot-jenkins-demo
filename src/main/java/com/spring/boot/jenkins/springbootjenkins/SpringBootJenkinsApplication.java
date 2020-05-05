@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.PostConstruct;
+
 @SpringBootApplication
 @RestController
 public class SpringBootJenkinsApplication {
@@ -18,6 +20,7 @@ public class SpringBootJenkinsApplication {
         return "Application Deployed successfully!!";
     }
 
+    @PostConstruct
     public void init(){
         logger.info("Application started...");
     }
