@@ -26,6 +26,7 @@ public class SpringBootJenkinsApplication {
     }
     public static void main(String[] args) {
         logger.info("Application executed...");
+        logger.info("Continuous Integration and Continuous Delivery with jenkins pipeline");
         SpringApplication.run(SpringBootJenkinsApplication.class, args);
     }
 
