@@ -1,0 +1,34 @@
+#!/bin/bash
+# go to Jenkins folder
+cd C:\Program Files (x86)\Jenkins
+#to stop:
+jenkins.exe stop
+#to start:
+#jenkins.exe start
+#to restart:
+#jenkins.exe restart
+echo %JENKINS_HOME%
+Admin password: 17115211425d43369e3ef72a231af5bd
+*** To start jenkins (standalone) on a diff port***
+java -jar jenkins.war --httpPort=9090
+cd C:\Users\feven\Desktop\javaDemo
+javac TestProjectJenkins.java
+java TestProjectJenkins
+#map data directory from the container to the host
+docker run -d --name MyJenkins -p 8080:8080 -p 50000:50000 -v /$(PWD)/jenkins:/var/jenkins_home:z -t jenkins/jenkins
+
+JENKINS BASIC
+  - java application
+  - is a tool used for continuous integration and continuous delivery
+
+Main stages in
+Continuous delivery and deployment pipeline
+
+1. BUILD
+2. DEPLOY
+3. TEST
+4. RELEASE
+
+Automated Deployment is the process of Automating the deployment process in a Continuous Delivery system
+
+Build - Deploy - Test - Release
